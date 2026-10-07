@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   stop-dialog.css — StopDialog component
+   Opens on double-click of a map marker
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Backdrop ─────────────────────────────────────────────────────────────── */
+
+.stop-dialog__backdrop {
+  position:         fixed;
+  inset:            0;
+  background:       rgba(27, 43, 75, 0.55);
+  backdrop-filter:  blur(3px);
+  z-index:          1000;
+  display:          flex;
+  align-items:      flex-end;          /* slides up from bottom on mobile */
+  justify-content:  center;
+  padding:          0;
+  animation:        backdrop-in 0.2s ease;
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (min-width: 640px) {
+  .stop-dialog__backdrop {
+    align-items:     center;          /* centred on desktop */
+    padding:         var(--space-lg);
+  }
+}
+
+/* ── Dialog panel ─────────────────────────────────────────────────────────── */
+
+.stop-dialog {
+  background:      var(--color-white);
+  width:           100%;
+  max-width:       560px;
+  max-height:      90dvh;
+  border-radius:   var(--radius-lg) var(--radius-lg) 0 0;
+  overflow-y:      auto;
+  overscroll-behavior: contain;
+  animation:       dialog-up 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding-bottom:  env(safe-area-inset-bottom);
+}
+
+@keyframes dialog-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0);    }
+}
+
+@media (min-width: 640px) {
+  .stop-dialog {
+    border-radius: var(--radius-lg);
+    animation:     dialog-in 0.2s ease;
+  }
+
+  @keyframes dialog-in {
+    from { transform: scale(0.95); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.stop-dialog__header {
+  display:      flex;
+  align-items:  flex-start;
+  gap:          var(--space-md);
+  padding:      var(--space-lg);
+  border-bottom: 1px solid var(--color-sand);
+  position:     sticky;
+  top:          0;
+  background:   var(--color-white);
+  z-index:      1;
+}
+
+.stop-dialog__num {
+  width:           34px;
+  height:          34px;
+  border-radius:   50%;
+  background:      var(--color-terracotta);
+  color:           var(--color-white);
+  font-family:     var(--font-display);
+  font-size:       1rem;
+  font-weight:     600;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  flex-shrink:     0;
+}
+
+.stop-dialog__title-wrap {
+  flex:        1;
+  min-width:   0;
+}
+
+.stop-dialog__title {
+  font-family:   var(--font-display);
+  font-size:     clamp(1rem, 4vw, 1.25rem);
+  color:         var(--color-navy);
+  line-height:   1.2;
+  margin-bottom: 2px;
+}
+
+.stop-dialog__duration {
+  font-size:  0.75rem;
+  color:      var(--color-text-muted);
+}
+
+.stop-dialog__close {
+  background:  none;
+  border:      none;
+  font-size:   1.1rem;
+  color:       var(--color-text-muted);
+  cursor:      pointer;
+  padding:     4px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition:  color var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stop-dialog__close:hover { color: var(--color-navy); }
+
+/* ── Audio controls ───────────────────────────────────────────────────────── */
+
+.stop-dialog__audio {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-md);
+  padding:       var(--space-sm) var(--space-lg);
+  background:    var(--color-cream-dark);
+  border-bottom: 1px solid var(--color-sand);
+}
+
+.stop-dialog__audio-label {
+  font-size:   0.78rem;
+  color:       var(--color-text-muted);
+  flex:        1;
+}
+
+.stop-dialog__audio-controls {
+  display: flex;
+  gap:     var(--space-sm);
+}
+
+.stop-dialog__audio-btn {
+  font-family:   var(--font-body);
+  font-size:     0.8rem;
+  font-weight:   500;
+  padding:       6px 14px;
+  border-radius: 99px;
+  border:        none;
+  cursor:        pointer;
+  transition:    all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stop-dialog__audio-btn--play {
+  background: var(--color-terracotta);
+  color:      var(--color-white);
+}
+
+.stop-dialog__audio-btn--play:hover {
+  background: #A84F23;
+}
+
+.stop-dialog__audio-btn--pause {
+  background: var(--color-navy);
+  color:      var(--color-white);
+}
+
+.stop-dialog__audio-btn--stop {
+  background:  transparent;
+  border:      1px solid var(--color-sand);
+  color:       var(--color-text-muted);
+}
+
+.stop-dialog__audio-btn--stop:hover {
+  background: var(--color-sand);
+}
+
+/* ── Stop photo ───────────────────────────────────────────────────────────── */
+
+.stop-dialog__img {
+  width:  100%;
+  height: 200px;
+}
+
+.stop-dialog__img img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+}
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+
+.stop-dialog__desc {
+  padding: var(--space-lg);
+}
+
+.stop-dialog__desc.markdown p {
+  font-size:     0.9rem;
+  line-height:   1.7;
+  color:         var(--color-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.stop-dialog__desc.markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.stop-dialog__desc.markdown strong {
+  color:       var(--color-navy);
+  font-weight: 600;
+}
+
+/* ── Local tip ────────────────────────────────────────────────────────────── */
+
+.stop-dialog__tip {
+  display:        flex;
+  flex-direction: column;
+  gap:            4px;
+  background:     rgba(212, 168, 83, 0.1);
+  border-left:    3px solid var(--color-gold);
+  border-radius:  0 var(--radius-sm) var(--radius-sm) 0;
+  padding:        var(--space-sm) var(--space-md);
+  margin:         0 var(--space-lg) var(--space-lg);
+}
+
+.stop-dialog__tip-label {
+  font-size:      0.65rem;
+  font-weight:    600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color:          var(--color-gold);
+}
+
+.stop-dialog__tip-text {
+  font-size:   0.85rem;
+  color:       var(--color-navy);
+  line-height: 1.55;
+}

@@ -1,0 +1,126 @@
+/* ── SAMPLE ROUTE ─────────────────────────────────────────────────────────── */
+.sample {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.sample__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.sample__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: var(--space-md);
+}
+
+.sample__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.sample__subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.sample__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sample__step {
+  display: grid;
+  grid-template-columns: 48px 24px 1fr;
+  gap: 0 var(--space-md);
+  align-items: start;
+}
+
+.sample__step-time {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+
+.sample__step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sample__step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sample__step-line {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  background: var(--color-sand);
+  margin: 4px 0;
+}
+
+.sample__step-content {
+  padding-bottom: var(--space-lg);
+}
+
+.sample__step-type {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.sample__step-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 2px;
+}
+
+.sample__step-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.sample__step-meta {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.8rem;
+}
+
+.sample__step-cost { color: var(--color-terracotta); font-weight: 500; }
+.sample__step-walk { color: var(--color-text-muted); }
+
+.sample__total {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-sand);
+}

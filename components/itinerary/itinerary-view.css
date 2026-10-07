@@ -1,0 +1,133 @@
+/* ── ITINERARY PAGE ───────────────────────────────────────────────────────── */
+.itinerary-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: var(--space-3xl);
+}
+
+.itinerary-banner {
+  background: var(--color-success);
+  color: white;
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.itinerary-header {
+  background: var(--color-navy);
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
+  color: var(--color-cream);
+}
+
+.itinerary-header__city {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-xs);
+}
+
+.itinerary-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-xs);
+}
+
+.itinerary-header__meta {
+  font-size: 0.875rem;
+  color: rgba(250, 247, 242, 0.6);
+}
+
+.itinerary-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--color-cream-dark);
+  justify-content: center;
+}
+
+.itinerary-tab {
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-sand);
+  background: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.itinerary-tab--active {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.04);
+}
+
+.itinerary-map {
+  padding: var(--space-lg);
+}
+
+.itinerary-timeline {
+  padding: 0 var(--space-lg);
+}
+
+.itinerary-actions {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-xl) 0;
+}
+
+.itinerary-paywall {
+  background: var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-cream);
+  margin-top: var(--space-xl);
+}
+
+.itinerary-paywall h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* ── LOGIN GATE ───────────────────────────────────────────────────────────── */
+.itinerary-login-gate {
+  margin-top:    var(--space-xl);
+  padding:       var(--space-xl);
+  background:    var(--color-cream-dark);
+  border-radius: var(--radius-lg);
+  border:        2px dashed var(--color-sand);
+}
+
+.itinerary-login-gate__inner {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  text-align:     center;
+  gap:            var(--space-md);
+}
+
+.itinerary-login-gate__title {
+  font-family: var(--font-display);
+  font-size:   1.25rem;
+  color:       var(--color-navy);
+  font-weight: 600;
+}
+
+.itinerary-login-gate__desc {
+  font-size:  0.9rem;
+  color:      var(--color-text-muted);
+  max-width:  36ch;
+  line-height: 1.6;
+}
+
+.itinerary-login-gate__note {
+  font-size: 0.75rem;
+  color:     var(--color-text-muted);
+}

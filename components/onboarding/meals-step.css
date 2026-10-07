@@ -1,0 +1,57 @@
+/* components/onboarding/meals-step.css */
+
+.meals__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.meals__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-sand);
+}
+
+.meals__row:last-child {
+  border-bottom: none;
+}
+
+.meals__row-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.meals__row-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.meals__pill {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-sand);
+  border-radius: 999px;
+  background: white;
+  color: var(--color-navy);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.meals__pill:hover {
+  border-color: var(--color-terracotta);
+}
+
+.meals__pill--primary {
+  font-weight: 600;
+}
+
+.meals__pill--active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: white;
+}

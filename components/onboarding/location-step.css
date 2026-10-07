@@ -1,0 +1,81 @@
+.location__input-wrap { margin-top: var(--space-lg); }
+
+.location__input {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-navy);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.location__input:focus {
+  border-color: var(--color-terracotta);
+}
+
+.location__confirmed {
+  margin-top: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.location__autocomplete-container {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+/* Style the Google PlaceAutocompleteElement web component */
+.location__autocomplete-container gmp-place-autocomplete {
+  width: 100%;
+}
+
+/* Override Google's default styles to match our design */
+.location__autocomplete-container input,
+.location__autocomplete-container gmp-place-autocomplete input {
+  width: 100% !important;
+  padding: var(--space-md) var(--space-lg) !important;
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  border: 2px solid var(--color-sand) !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--color-white) !important;
+  color: var(--color-navy) !important;
+  outline: none !important;
+}
+
+.location__helper {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.location__confirmed {
+  margin-top: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.location__switch {
+  display: inline-block;
+  margin-top: var(--space-md);
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.location__switch:hover {
+  color: var(--color-terracotta);
+}

@@ -1,0 +1,376 @@
+/* ── CREATE GUIDE (admin) ─────────────────────────────────────────────────── */
+ 
+.create-guide {
+  max-width: 680px;
+  margin:    0 auto;
+  padding:   var(--space-xl) var(--space-lg) var(--space-3xl);
+}
+ 
+/* Header bar */
+.create-guide__header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             var(--space-md);
+  margin-bottom:   var(--space-2xl);
+  padding-bottom:  var(--space-lg);
+  border-bottom:   2px solid var(--color-sand);
+  flex-wrap:       wrap;
+}
+ 
+.create-guide__title {
+  font-family: var(--font-display);
+  font-size:   clamp(1.5rem, 4vw, 2rem);
+  color:       var(--color-navy);
+}
+ 
+.create-guide__actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-md);
+}
+ 
+/* Published toggle */
+.create-guide__toggle {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-sm);
+  font-size:   0.875rem;
+  color:       var(--color-text-muted);
+  cursor:      pointer;
+  user-select: none;
+}
+ 
+.create-guide__toggle input[type="checkbox"] {
+  width:         16px;
+  height:        16px;
+  accent-color:  var(--color-terracotta);
+  cursor:        pointer;
+}
+ 
+/* Sections */
+.create-guide__section {
+  margin-bottom: var(--space-2xl);
+}
+ 
+.create-guide__section-title {
+  font-family:   var(--font-display);
+  font-size:     1.15rem;
+  color:         var(--color-navy);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-sand);
+}
+ 
+/* Form fields */
+.create-guide__field {
+  margin-bottom: var(--space-md);
+}
+ 
+.create-guide__field label {
+  display:       block;
+  font-size:     0.8rem;
+  font-weight:   500;
+  color:         var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+ 
+.create-guide__field input,
+.create-guide__field textarea,
+.create-guide__field select {
+  width:         100%;
+  padding:       var(--space-sm) var(--space-md);
+  font-family:   var(--font-body);
+  font-size:     0.95rem;
+  color:         var(--color-navy);
+  background:    var(--color-white);
+  border:        2px solid var(--color-sand);
+  border-radius: var(--radius-sm);
+  outline:       none;
+  transition:    border-color var(--transition-fast);
+}
+ 
+.create-guide__field input:focus,
+.create-guide__field textarea:focus,
+.create-guide__field select:focus {
+  border-color: var(--color-terracotta);
+}
+ 
+.create-guide__field textarea {
+  resize:      vertical;
+  line-height: 1.6;
+}
+ 
+/* Two-column row */
+.create-guide__row {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   var(--space-md);
+}
+ 
+/* Checkbox */
+.create-guide__checkbox {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-sm);
+  font-size:   0.9rem;
+  color:       var(--color-text-muted);
+  cursor:      pointer;
+  user-select: none;
+}
+ 
+.create-guide__checkbox input {
+  width:        16px;
+  height:       16px;
+  accent-color: var(--color-terracotta);
+  cursor:       pointer;
+}
+ 
+/* Individual stop editor */
+.create-guide__stop {
+  background:    var(--color-white);
+  border:        1.5px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  padding:       var(--space-lg);
+  margin-bottom: var(--space-md);
+  box-shadow:    var(--shadow-card);
+}
+ 
+.create-guide__stop-header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--space-md);
+}
+ 
+.create-guide__stop-num {
+  width:           28px;
+  height:          28px;
+  border-radius:   50%;
+  background:      var(--color-terracotta);
+  color:           var(--color-white);
+  font-family:     var(--font-display);
+  font-size:       0.85rem;
+  font-weight:     600;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+ 
+.create-guide__stop-remove {
+  font-size:   0.8rem;
+  color:       var(--color-text-muted);
+  background:  none;
+  border:      none;
+  cursor:      pointer;
+  font-family: var(--font-body);
+  padding:     0;
+  transition:  color var(--transition-fast);
+}
+ 
+.create-guide__stop-remove:hover:not(:disabled) {
+  color: #C0392B;
+}
+ 
+.create-guide__stop-remove:disabled {
+  opacity: 0.3;
+  cursor:  not-allowed;
+}
+ 
+/* Add stop button */
+.create-guide__add-stop {
+  width:         100%;
+  padding:       var(--space-md);
+  font-family:   var(--font-body);
+  font-size:     0.9rem;
+  color:         var(--color-text-muted);
+  background:    transparent;
+  border:        2px dashed var(--color-sand);
+  border-radius: var(--radius-md);
+  cursor:        pointer;
+  transition:    all var(--transition-fast);
+  margin-top:    var(--space-sm);
+}
+ 
+.create-guide__add-stop:hover {
+  border-color: var(--color-terracotta);
+  color:        var(--color-terracotta);
+}
+
+/* ── Stop image upload (admin) ───────────────────────────────────────────── */
+
+.create-guide__img-preview {
+  position:      relative;
+  border-radius: var(--radius-sm);
+  overflow:      hidden;
+  margin-bottom: var(--space-xs);
+}
+
+.create-guide__img-preview img {
+  width:      100%;
+  height:     160px;
+  object-fit: cover;
+  display:    block;
+}
+
+.create-guide__img-remove {
+  position:    absolute;
+  top:         8px;
+  right:       8px;
+  font-size:   12px;
+  padding:     4px 10px;
+  border-radius: 6px;
+  background:  rgba(0,0,0,.55);
+  color:       #fff;
+  border:      none;
+  cursor:      pointer;
+  font-family: var(--font-body);
+}
+
+.create-guide__img-upload {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           100%;
+  height:          80px;
+  border:          2px dashed var(--color-sand);
+  border-radius:   var(--radius-sm);
+  cursor:          pointer;
+  transition:      border-color var(--transition-fast);
+}
+
+.create-guide__img-upload:hover {
+  border-color: var(--color-terracotta);
+}
+
+.create-guide__img-placeholder {
+  font-size: 0.875rem;
+  color:     var(--color-text-muted);
+}
+
+.create-guide__img-uploading {
+  font-size: 0.875rem;
+  color:     var(--color-terracotta);
+}
+
+/* ── MARKDOWN EDITOR (write/preview toggle) ────────────────────────────── */
+
+.md-editor__tabs {
+  display:       flex;
+  border-bottom: 2px solid var(--color-sand);
+  margin-bottom: 0;
+}
+
+.md-editor__tabs--small {
+  margin-top: var(--space-xs);
+}
+
+.md-editor__tab {
+  padding:     var(--space-xs) var(--space-md);
+  background:  none;
+  border:      none;
+  font-family: var(--font-body);
+  font-size:   0.8rem;
+  font-weight: 500;
+  color:       var(--color-text-muted);
+  cursor:      pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition:  all var(--transition-fast);
+}
+
+.md-editor__tab--active {
+  color:              var(--color-terracotta);
+  border-bottom-color: var(--color-terracotta);
+}
+
+.md-editor__textarea {
+  width:         100%;
+  padding:       var(--space-md);
+  border:        2px solid var(--color-sand);
+  border-top:    none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family:   'Courier New', monospace;
+  font-size:     0.9rem;
+  line-height:   1.7;
+  color:         var(--color-navy);
+  background:    var(--color-white);
+  resize:        vertical;
+  outline:       none;
+  transition:    border-color var(--transition-fast);
+}
+
+.md-editor__textarea:focus {
+  border-color: var(--color-terracotta);
+}
+
+.md-editor__textarea--small {
+  min-height: 100px;
+  font-size:  0.85rem;
+}
+
+.md-editor__preview {
+  min-height:    120px;
+  padding:       var(--space-md);
+  border:        2px solid var(--color-sand);
+  border-top:    none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  background:    var(--color-cream);
+}
+
+.md-editor__preview--small {
+  min-height: 80px;
+}
+
+.md-editor__preview-empty {
+  font-size:   0.85rem;
+  color:       var(--color-text-muted);
+  font-style:  italic;
+}
+
+/* Markdown rendered inside preview uses the same .markdown styles
+   already defined in globals.css for the blog. Just add the class: */
+.md-editor__preview { }  /* inherits .markdown styles via ReactMarkdown */
+
+/* ── CHEATSHEET ──────────────────────────────────────────────────────────── */
+
+.md-editor__cheatsheet {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   2px 16px;
+  margin-top:            var(--space-sm);
+  padding:               var(--space-sm) var(--space-md);
+  background:            var(--color-cream-dark);
+  border-radius:         0 0 var(--radius-sm) var(--radius-sm);
+  border:                1px solid var(--color-sand);
+  border-top:            none;
+}
+
+.md-editor__cheatsheet-row {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-sm);
+  padding:     3px 0;
+}
+
+.md-editor__cheatsheet-syntax {
+  font-family:   'Courier New', monospace;
+  font-size:     0.7rem;
+  color:         var(--color-terracotta);
+  background:    rgba(196, 98, 45, 0.08);
+  padding:       1px 5px;
+  border-radius: 3px;
+  white-space:   nowrap;
+}
+
+.md-editor__cheatsheet-result {
+  font-size: 0.7rem;
+  color:     var(--color-text-muted);
+}
+
+@media (max-width: 540px) {
+  .create-guide__row   { grid-template-columns: 1fr; }
+}
+

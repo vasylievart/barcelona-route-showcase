@@ -1,0 +1,313 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   guide-view.css
+   Covers: GuideView.tsx · app/guides/[slug]/page.tsx
+   Import: @import './guide-view.css'; in globals.css
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Page wrapper ─────────────────────────────────────────────────────────── */
+
+.guide-view {
+  max-width: 680px;
+  margin:    0 auto;
+  padding:   0 var(--space-lg) var(--space-3xl);
+}
+
+/* Back link — rendered in app/guides/[slug]/page.tsx above <GuideView> */
+.guide-view__back {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--space-xs);
+  font-size:       0.875rem;
+  color:           var(--color-terracotta);
+  text-decoration: none;
+  padding:         var(--space-lg) 0 0;
+  transition:      opacity var(--transition-fast);
+}
+
+.guide-view__back:hover { opacity: 0.7; }
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.guide-view__header {
+  padding-top:   var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.guide-view__cover {
+  width:         100%;
+  height:        240px;
+  object-fit:    cover;
+  border-radius: var(--radius-md);
+  display:       block;
+  margin-bottom: var(--space-lg);
+}
+
+.guide-view__title {
+  font-family:   var(--font-display);
+  font-size:     clamp(1.75rem, 5vw, 2.5rem);
+  color:         var(--color-navy);
+  margin-bottom: var(--space-sm);
+  line-height:   1.15;
+}
+
+/* Tags + stats row */
+.guide-view__tags {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-sm);
+  flex-wrap:     wrap;
+  margin-bottom: var(--space-md);
+}
+
+.guide-view__tag {
+  font-size:      0.75rem;
+  font-weight:    500;
+  text-transform: capitalize;
+  padding:        3px 10px;
+  border-radius:  99px;
+  background:     rgba(196, 98, 45, 0.1);
+  color:          var(--color-terracotta);
+}
+
+/* Stats separated by a · using a wrapping span */
+.guide-view__stats {
+  display:     flex;
+  align-items: center;
+  gap:         0;
+}
+
+.guide-view__stat {
+  font-size:   0.8rem;
+  color:       var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* · separator between stats — added via CSS between siblings */
+.guide-view__stat + .guide-view__stat::before {
+  content:      '·';
+  margin:       0 var(--space-sm);
+  color:        var(--color-sand);
+  font-weight:  400;
+}
+
+/* Description — plain text or markdown */
+.guide-view__desc {
+  font-size:     1rem;
+  color:         var(--color-text-muted);
+  line-height:   1.7;
+  max-width:     52ch;
+  margin-top:    var(--space-md);
+}
+
+/* When description is rendered as markdown — inherits .markdown styles
+   from globals.css; just override the colour to match the guide palette */
+.guide-view__desc.markdown p {
+  color:       var(--color-text-muted);
+  font-size:   1rem;
+  line-height: 1.7;
+}
+
+.guide-view__desc.markdown h2,
+.guide-view__desc.markdown h3 {
+  font-size:     1.1rem;
+  margin-top:    var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+/* ── Map area ─────────────────────────────────────────────────────────────── */
+
+.guide-view__map {
+  border-radius: var(--radius-md);
+  overflow:      hidden;
+  margin-bottom: var(--space-xl);
+  background:    var(--color-cream-dark);
+}
+
+/* ── Stop list header ─────────────────────────────────────────────────────── */
+
+/* Optional row above the stop list: stop count + "Open in Google Maps" link */
+.guide-view__stops-header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--space-lg);
+  padding-bottom:  var(--space-sm);
+  border-bottom:   1px solid var(--color-sand);
+}
+
+.guide-view__stops-count {
+  font-size:   0.85rem;
+  font-weight: 500;
+  color:       var(--color-text-muted);
+}
+
+.guide-view__stops-link {
+  font-size:       0.8rem;
+  color:           var(--color-terracotta);
+  text-decoration: none;
+  transition:      opacity var(--transition-fast);
+}
+
+.guide-view__stops-link:hover { opacity: 0.7; }
+
+/* ── Stop list ────────────────────────────────────────────────────────────── */
+
+.guide-view__stops {
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+}
+
+/* ── Individual stop ──────────────────────────────────────────────────────── */
+
+.guide-stop {
+  display:               grid;
+  grid-template-columns: 40px 1fr;
+  gap:                   0 var(--space-md);
+  align-items:           start;
+}
+
+/* Left column: number circle + connecting line */
+.guide-stop__connector {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  padding-top:    4px;
+}
+
+.guide-stop__num {
+  width:           32px;
+  height:          32px;
+  border-radius:   50%;
+  background:      var(--color-terracotta);
+  color:           var(--color-white);
+  font-family:     var(--font-display);
+  font-size:       0.9rem;
+  font-weight:     600;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  flex-shrink:     0;
+}
+
+.guide-stop__line {
+  width:      2px;
+  flex:       1;
+  min-height: 32px;
+  background: var(--color-sand);
+  margin:     6px 0;
+}
+
+/* Hide the line after the last stop */
+.guide-stop--last .guide-stop__line { display: none; }
+
+/* Right column: all content */
+.guide-stop__content {
+  padding-bottom: var(--space-xl);
+}
+
+/* Optional stop-level photo */
+.guide-stop__img {
+  width:         100%;
+  height:        160px;
+  object-fit:    cover;
+  border-radius: var(--radius-sm);
+  display:       block;
+  margin-bottom: var(--space-sm);
+}
+
+.guide-stop__name {
+  font-family:   var(--font-display);
+  font-size:     1.15rem;
+  font-weight:   600;
+  color:         var(--color-navy);
+  margin-bottom: 2px;
+  line-height:   1.25;
+}
+
+/* Lat/lng shown in small monospace */
+.guide-stop__coords {
+  font-family:    var(--font-body);
+  font-size:      0.7rem;
+  color:          var(--color-text-muted);
+  margin-bottom:  var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+/* Plain text description */
+.guide-stop__desc {
+  font-size:     0.9rem;
+  color:         var(--color-text);
+  line-height:   1.7;
+  margin-bottom: var(--space-sm);
+}
+
+/* Markdown description inside a stop
+   .markdown styles come from globals.css; this adjusts font size only */
+.guide-stop__content .markdown p {
+  font-size:   0.9rem;
+  line-height: 1.7;
+  color:       var(--color-text);
+}
+
+.guide-stop__content .markdown h2,
+.guide-stop__content .markdown h3 {
+  font-size: 1rem;
+}
+
+/* ── Local tip callout ────────────────────────────────────────────────────── */
+
+.guide-stop__tip {
+  display:       flex;
+  flex-direction: column;       /* label above text, not beside it */
+  gap:           4px;
+  background:    rgba(212, 168, 83, 0.1);
+  border-left:   3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding:       var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.guide-stop__tip-label {
+  font-size:      0.65rem;
+  font-weight:    600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color:          var(--color-gold);
+  line-height:    1;
+}
+
+.guide-stop__tip-text {
+  font-size:   0.85rem;
+  color:       var(--color-navy);
+  line-height: 1.55;
+}
+
+/* ── Duration pill ────────────────────────────────────────────────────────── */
+
+.guide-stop__duration {
+  display:       inline-block;
+  font-size:     0.75rem;
+  color:         var(--color-text-muted);
+  background:    var(--color-cream-dark);
+  border-radius: 99px;
+  padding:       2px 10px;
+  margin-top:    var(--space-xs);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 540px) {
+  .guide-view__cover { height: 180px; }
+  .guide-view__map   { height: 220px; }
+
+  .guide-view__title {
+    font-size: 1.5rem;
+  }
+
+  .guide-stop__num {
+    width:     26px;
+    height:    26px;
+    font-size: 0.8rem;
+  }
+}

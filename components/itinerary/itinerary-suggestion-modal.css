@@ -1,0 +1,66 @@
+/* components/itinerary/itinerary-suggestion-modal.css */
+
+.suggestion-modal__content {
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-sand);
+  box-shadow: var(--shadow-lift);
+  padding: var(--space-xl);
+  background: white;
+}
+
+.suggestion-modal__header {
+  text-align: left;
+  margin-bottom: var(--space-lg);
+}
+
+.suggestion-modal__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.suggestion-modal__description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.suggestion-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.suggestion-modal__cancel {
+  background: none;
+  border: 1px solid var(--color-sand);
+  border-radius: 10px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.suggestion-modal__cancel:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-navy);
+}
+
+.suggestion-modal__action {
+  background: var(--color-terracotta);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.suggestion-modal__action:hover {
+  opacity: 0.9;
+}

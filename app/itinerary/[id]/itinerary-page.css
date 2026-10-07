@@ -1,0 +1,14 @@
+/* app/itinerary/[id]/itinerary-page.css (or wherever this page's CSS lives) */
+
+.itinerary-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.itinerary-page__suggestion-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: var(--space-xl) var(--space-lg);
+}

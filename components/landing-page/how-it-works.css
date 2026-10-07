@@ -1,0 +1,53 @@
+/* ── HOW IT WORKS ─────────────────────────────────────────────────────────── */
+.how {
+  background: var(--color-navy);
+  padding: var(--space-3xl) var(--space-lg);
+  text-align: center;
+}
+
+.how__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-cream);
+  margin-bottom: var(--space-2xl);
+}
+
+.how__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .how__steps { flex-direction: row; }
+}
+
+.how__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.how__step-n {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.how__step-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-cream);
+}
+
+.how__step-desc {
+  font-size: 0.875rem;
+  color: rgba(250, 247, 242, 0.6);
+  line-height: 1.5;
+}

@@ -1,0 +1,55 @@
+/* ── BUDGET STEP ──────────────────────────────────────────────────────────── */
+.budget__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.budget__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  text-align: left;
+  width: 100%;
+}
+
+.budget__option:hover {
+  border-color: var(--color-terracotta);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.budget__option--active {
+  border-color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.04);
+}
+
+.budget__option-emoji { font-size: 2rem; }
+
+.budget__option-info { flex: 1; }
+
+.budget__option-label {
+  font-weight: 500;
+  color: var(--color-navy);
+  margin-bottom: 2px;
+}
+
+.budget__option-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.budget__option-price {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+}
+

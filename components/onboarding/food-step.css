@@ -1,0 +1,113 @@
+/* ── FOOD STEP ────────────────────────────────────────────────────────────── */
+.food__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.food__category {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.food__category-row {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: stretch;
+}
+
+.food__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: all var(--transition-normal);
+}
+
+.food__btn:hover {
+  border-color: var(--color-terracotta);
+}
+
+.food__btn--active {
+  border-color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.05);
+}
+
+.food__btn-emoji { font-size: 1.25rem; }
+
+.food__btn-label {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
+.food__btn-badge {
+  background: var(--color-terracotta);
+  color: white;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.food__expand {
+  padding: 0 var(--space-md);
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  transition: all var(--transition-normal);
+}
+
+.food__expand:hover { border-color: var(--color-terracotta); }
+.food__expand--open { border-color: var(--color-terracotta); }
+
+.food__subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
+  background: rgba(196, 98, 45, 0.03);
+  border: 1px solid var(--color-sand);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  margin-top: -2px;
+}
+
+.food__sub-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1.5px solid var(--color-sand);
+  border-radius: 99px;
+  background: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.food__sub-btn:hover { border-color: var(--color-terracotta); }
+
+.food__sub-btn--active {
+  border-color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.08);
+  color: var(--color-terracotta);
+  font-weight: 500;
+}

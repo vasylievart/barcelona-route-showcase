@@ -1,0 +1,66 @@
+/* ── STEP SHARED ──────────────────────────────────────────────────────────── */
+.step__question {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.step__hint {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+  line-height: 1.5;
+}
+
+/* ── DURATION STEP ────────────────────────────────────────────────────────── */
+.duration__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.duration__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-lg) var(--space-md);
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+}
+
+.duration__option:hover {
+  border-color: var(--color-terracotta);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.duration__option--active {
+  border-color: var(--color-terracotta);
+  background: rgba(196, 98, 45, 0.04);
+}
+
+.duration__option-days {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.duration__option-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.duration__option-price {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-terracotta);
+}

@@ -1,0 +1,133 @@
+/* components/onboarding/group-step.css */
+
+.group-step {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.group-step__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.group-step__subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.group-step__section {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-sand);
+}
+
+.group-step__section:last-of-type {
+  border-bottom: none;
+}
+
+.group-step__checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9375rem;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.group-step__sub-counters {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* --- Counter (components/ui/Counter.tsx) --- */
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+}
+
+.counter__label {
+  font-size: 0.9375rem;
+  color: var(--color-navy);
+}
+
+.counter__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.counter__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-sand);
+  background: white;
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.counter__btn:hover:not(:disabled) {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.counter__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.counter__value {
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+/* --- Actions --- */
+
+.group-step__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-xl);
+}
+
+.group-step__back {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.group-step__next {
+  background: var(--color-terracotta);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.group-step__next:hover {
+  opacity: 0.9;
+}
+
+.group-step__next--inactive {
+  opacity: 0.4;
+}

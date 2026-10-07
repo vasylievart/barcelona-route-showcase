@@ -1,0 +1,42 @@
+/* ── CHECKOUT BUTTON ──────────────────────────────────────────────────────── */
+.checkout-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.checkout-btn {
+  width: 100%;
+  max-width: 340px;
+  position: relative;
+}
+
+.checkout-btn__loading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.checkout-btn__spinner {
+  width:  16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+.checkout-btn__error {
+  font-size: 0.8rem;
+  color: #dc2626;
+  text-align: center;
+}
+
+.checkout-btn__note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}

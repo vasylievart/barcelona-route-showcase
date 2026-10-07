@@ -1,0 +1,78 @@
+/* ── EXPORT BUTTONS ───────────────────────────────────────────────────────── */
+.export {
+  padding: var(--space-xl) 0;
+  border-top: 2px solid var(--color-sand);
+  margin-top: var(--space-xl);
+}
+
+.export__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.export__primary,
+.export__secondary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.export__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  background: var(--color-white);
+  border: 2px solid var(--color-sand);
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: all var(--transition-normal);
+  width: 100%;
+}
+
+.export__btn:hover {
+  border-color: var(--color-terracotta);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.export__btn--google { border-color: #4285F4; }
+.export__btn--google:hover { background: rgba(66, 133, 244, 0.04); }
+
+.export__btn--apple { border-color: #000; }
+.export__btn--apple:hover { background: rgba(0, 0, 0, 0.03); }
+
+.export__btn-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.export__btn-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.export__btn-text strong {
+  font-size: 0.9rem;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.export__btn-text small {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.export__btn-arrow {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

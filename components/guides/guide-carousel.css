@@ -1,0 +1,68 @@
+/* ── GUIDES CAROUSEL ────────────────────────────────────────────────────── */
+ 
+.guides-carousel {
+  padding:    var(--space-3xl) 0;
+  background: var(--color-cream-dark);
+  overflow:   hidden;
+}
+ 
+.guides-carousel__header {
+  padding:       0 var(--space-lg);
+  margin-bottom: var(--space-xl);
+  display:       flex;
+  align-items:   baseline;
+  justify-content: space-between;
+  flex-wrap:     wrap;
+  gap:           var(--space-sm);
+  max-width:     1080px;
+  margin-left:   auto;
+  margin-right:  auto;
+}
+ 
+.guides-carousel__title {
+  font-family: var(--font-display);
+  font-size:   clamp(1.5rem, 3vw, 2rem);
+  color:       var(--color-navy);
+  line-height: 1.2;
+}
+ 
+.guides-carousel__sub {
+  font-size: 0.85rem;
+  color:     var(--color-text-muted);
+}
+ 
+/* Scrollable track */
+.guides-carousel__track {
+  display:         flex;
+  gap:             var(--space-md);
+  padding:         var(--space-sm) var(--space-lg) var(--space-lg);
+  overflow-x:      auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  max-width:       calc(1080px + var(--space-lg) * 2);
+  margin:          0 auto;
+}
+ 
+.guides-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+ 
+/* Every card snaps */
+.guides-carousel__track .guide-card {
+  scroll-snap-align: start;
+}
+ 
+/* Desktop: show 4 cards without scrolling */
+@media (min-width: 1000px) {
+  .guides-carousel__track {
+    display:               grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    overflow-x:            visible;
+    padding-bottom:        0;
+  }
+ 
+  .guide-card {
+    width: auto;
+  }
+}

@@ -1,0 +1,46 @@
+/* Global design tokens — import in app/globals.css */
+
+
+:root {
+  /* Colours — Barcelona palette */
+  --color-terracotta:  #C4622D;
+  --color-terracotta-light: #E8896A;
+  --color-navy:        #1B2B4B;
+  --color-navy-light:  #2D4270;
+  --color-cream:       #FAF7F2;
+  --color-cream-dark:  #F0EAE0;
+  --color-gold:        #D4A853;
+  --color-sand:        #E8D5B7;
+  --color-text:        #1B2B4B;
+  --color-text-muted:  #6B7A94;
+  --color-white:       #FFFFFF;
+  --color-success:     #2D7D5A;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Transitions */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --shadow-card: 0 2px 20px rgba(27, 43, 75, 0.08);
+  --shadow-lift: 0 8px 40px rgba(27, 43, 75, 0.16);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}

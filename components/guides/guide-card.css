@@ -1,0 +1,98 @@
+.guide-card {
+  display:         flex;
+  flex-direction:  column;
+  background:      var(--color-white);
+  border-radius:   var(--radius-md);
+  overflow:        hidden;
+  box-shadow:      var(--shadow-card);
+  text-decoration: none;
+  color:           inherit;
+  transition:      transform var(--transition-normal),
+                   box-shadow var(--transition-normal);
+  flex-shrink:     0;
+  width:           220px;
+}
+ 
+.guide-card:hover {
+  transform:   translateY(-4px);
+  box-shadow:  var(--shadow-lift);
+}
+ 
+/* Thumbnail */
+.guide-card__thumb {
+  position:        relative;
+  height:          130px;
+  background:      var(--color-cream-dark);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  overflow:        hidden;
+}
+ 
+.guide-card__img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+}
+ 
+.guide-card__icon {
+  font-size:   2.5rem;
+  line-height: 1;
+}
+ 
+/* Badges overlaid on the thumbnail */
+.guide-card__stops-badge {
+  position:      absolute;
+  top:           8px;
+  right:         8px;
+  font-size:     0.7rem;
+  font-weight:   500;
+  padding:       3px 8px;
+  border-radius: 99px;
+  background:    rgba(27, 43, 75, 0.75);
+  color:         var(--color-cream);
+  backdrop-filter: blur(4px);
+}
+ 
+.guide-card__locked-badge {
+  position:      absolute;
+  top:           8px;
+  left:          8px;
+  font-size:     0.65rem;
+  font-weight:   500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding:       3px 8px;
+  border-radius: 99px;
+  background:    var(--color-terracotta);
+  color:         var(--color-white);
+}
+ 
+/* Body */
+.guide-card__body {
+  padding:        var(--space-md) var(--space-md) var(--space-lg);
+  display:        flex;
+  flex-direction: column;
+  gap:            4px;
+  flex:           1;
+}
+ 
+.guide-card__name {
+  font-family: var(--font-display);
+  font-size:   1rem;
+  font-weight: 600;
+  color:       var(--color-navy);
+  line-height: 1.25;
+}
+ 
+.guide-card__meta {
+  font-size:   0.75rem;
+  color:       var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+@media (max-width: 540px) {
+  .guide-card          { width: 180px; }
+  .guide-card__thumb   { height: 110px; }
+}

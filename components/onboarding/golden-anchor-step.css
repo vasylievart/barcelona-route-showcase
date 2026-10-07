@@ -1,0 +1,74 @@
+/* components/onboarding/golden-anchor-step.css */
+
+.golden-anchor-step__loading {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-3xl) 0;
+}
+
+.golden-anchor-step__subheading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.golden-anchor-step__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-sm);
+}
+
+.golden-anchor-step__card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-sand);
+  border-radius: 12px;
+  background: white;
+  color: var(--color-navy);
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.golden-anchor-step__card:hover:not(:disabled) {
+  border-color: var(--color-terracotta);
+}
+
+.golden-anchor-step__card--active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: white;
+}
+
+.golden-anchor-step__card:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.golden-anchor-step__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-2xl);
+}
+
+.golden-anchor-step__nav-btn {
+  background: none;
+  border: 1px solid var(--color-sand);
+  border-radius: 10px;
+  padding: var(--space-sm) var(--space-lg);
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.golden-anchor-step__nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.golden-anchor-step__nav-count {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}

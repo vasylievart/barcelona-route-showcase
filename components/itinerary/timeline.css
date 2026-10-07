@@ -1,0 +1,192 @@
+/* ── TIMELINE ─────────────────────────────────────────────────────────────── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline__walk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+}
+
+.timeline__walk-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-sand);
+}
+
+.timeline__walk-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.timeline__card {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: var(--space-md);
+  align-items: start;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-normal);
+}
+
+.timeline__card:hover {
+  box-shadow: var(--shadow-lift);
+}
+
+.timeline__card--blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+}
+
+.timeline__card-number {
+  width:  36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-white);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.timeline__card-time {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.timeline__card-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline__card-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.timeline__card-desc {
+  font-size: 0.825rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.timeline__card-booking {
+  margin-top: var(--space-xs);
+  font-size: 0.775rem;
+  color: var(--color-gold);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.timeline__card-booking-link {
+  color: var(--color-terracotta);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.timeline__card-booking-link:hover {
+  text-decoration: underline;
+}
+
+.timeline__card-website {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  font-size: 0.775rem;
+  color: var(--color-terracotta);
+  text-decoration: none;
+}
+
+.timeline__card-website:hover {
+  text-decoration: underline;
+}
+
+.timeline__card-cost {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-terracotta);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.timeline__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) var(--space-lg);
+  margin-top: var(--space-md);
+  border-top: 2px solid var(--color-sand);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.timeline__total strong {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-navy);
+}
+/* ── WALK-BY STOPS ────────────────────────────────────────────────────────── */
+.timeline__walkby {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  margin: 0 var(--space-xs);
+  border-left: 2px dashed var(--color-sand);
+  margin-left: calc(var(--space-lg) + 18px);  /* align with timeline */
+}
+
+.timeline__walkby-dot {
+  width:         8px;
+  height:        8px;
+  border-radius: 50%;
+  background:    var(--color-sand);
+  flex-shrink:   0;
+  margin-top:    5px;
+}
+
+.timeline__walkby-content {
+  display:        flex;
+  flex-direction: column;
+  gap:            2px;
+}
+
+.timeline__walkby-label {
+  font-size:  0.7rem;
+  color:      var(--color-text-muted);
+  font-weight: 500;
+}
+
+.timeline__walkby-name {
+  font-size:  0.875rem;
+  color:      var(--color-navy);
+  font-weight: 500;
+}
+
+.timeline__walkby-desc {
+  font-size:   0.775rem;
+  color:       var(--color-text-muted);
+  line-height: 1.4;
+}

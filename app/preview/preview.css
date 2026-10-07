@@ -1,0 +1,212 @@
+/* ── PREVIEW ──────────────────────────────────────────────────────────────── */
+.preview {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-3xl);
+}
+
+.preview__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding-top: var(--space-xl);
+}
+
+.preview__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-navy);
+  margin-bottom: var(--space-xs);
+}
+
+.preview__subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.preview__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.preview__step {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: var(--space-md);
+  align-items: start;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.preview__step--blurred {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.preview__step-time {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding-top: 2px;
+}
+
+.preview__step-type {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 2px;
+}
+
+.preview__step-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 2px;
+}
+
+.preview__step-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.preview__step-booking {
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.preview__step-cost {
+  font-weight: 500;
+  color: var(--color-terracotta);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.preview__locked {
+  position: relative;
+}
+
+.preview__locked-blur {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.preview__paywall {
+  background: var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-cream);
+}
+
+.preview__paywall-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+
+.preview__paywall-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+}
+
+.preview__paywall-perks li {
+  font-size: 0.875rem;
+  color: rgba(250, 247, 242, 0.8);
+}
+
+.preview__unlock-btn {
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+
+.preview__paywall-note {
+  font-size: 0.75rem;
+  color: rgba(250, 247, 242, 0.5);
+}
+
+.preview-error {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.preview__map-wrap {
+  margin-bottom: var(--space-xl);
+}
+
+.preview__map-hint {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ── PREVIEW PAYWALL ──────────────────────────────────────────────────────── */
+.preview__timeline-wrap {
+  margin-bottom: var(--space-xl);
+}
+
+.preview__paywall {
+  background: var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-cream);
+  margin-bottom: var(--space-3xl);
+}
+
+.preview__paywall-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-lg);
+  line-height: 1.3;
+}
+
+.preview__paywall-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preview__paywall-perks li {
+  font-size: 0.875rem;
+  color: rgba(250, 247, 242, 0.85);
+}
+
+.preview__unlock-btn {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: var(--space-sm);
+}
+
+.preview__paywall-note {
+  font-size: 0.75rem;
+  color: rgba(250, 247, 242, 0.45);
+}

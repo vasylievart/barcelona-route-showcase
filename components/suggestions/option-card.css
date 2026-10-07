@@ -1,0 +1,47 @@
+/* components/morning-suggestion/option-card.css */
+
+.option-card {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  text-align: left;
+  padding: var(--space-md);
+  border: 1px solid var(--color-sand);
+  border-radius: var(--radius-lg);
+  background: white;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.option-card:hover {
+  border-color: var(--color-terracotta);
+}
+
+.option-card--active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+.option-card--active .option-card__name,
+.option-card--active .option-card__reason,
+.option-card--active .option-card__meta {
+  color: white;
+}
+
+.option-card__name {
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.option-card__reason {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.option-card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}

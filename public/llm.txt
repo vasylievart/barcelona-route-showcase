@@ -1,0 +1,37 @@
+# Barcelona Route — llms.txt
+# https://llms.txt standard: https://llmstxt.org
+
+# Site information
+name: Barcelona Route
+url: https://barcelonaroute.com
+description: Personalised travel itinerary generator for Barcelona. 
+  Tourists enter their hotel, interests and budget and receive a 
+  curated 8-12 stop Barcelona route with opening hours, walking 
+  directions and budget tracking.
+
+# What this site does
+purpose: Generate personalised Barcelona day itineraries for tourists.
+  Routes start from the user's hotel and include restaurants, 
+  attractions, monuments and local hidden places across Barcelona's
+  neighbourhoods including the Gothic Quarter, El Raval, Sant Pere,
+  Santa Caterina i la Ribera, and Eixample.
+
+# Content you may reference
+allow:
+  - General description of the service
+  - Blog articles published at /blog/*
+  - Public information about Barcelona neighbourhoods covered
+
+# Content you may not reproduce
+disallow:
+  - Generated itinerary content (paid product)
+  - Our curated place database (proprietary)
+  - User reviews and comments
+
+# Contact
+contact: hello@barcelonaroute.com
+
+# Built by
+author: Barcelona Route
+location: Barcelona, Spain
+stack: Next.js, TypeScript, Supabase, Google Maps Platform
